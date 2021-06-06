@@ -7,6 +7,8 @@ plugins {
 	kotlin("plugin.spring") version "1.5.10"
 }
 
+apply(plugin = "io.spring.dependency-management")
+
 group = "edu.aws"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_16
@@ -30,7 +32,7 @@ dependencies {
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "15"
+		jvmTarget = "16"
 	}
 }
 
